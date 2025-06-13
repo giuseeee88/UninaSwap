@@ -28,7 +28,7 @@ public class Controller {
 	@FXML
 	public void Prodotti(MouseEvent e) {
 		try {
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("prodotti.fxml"));
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../uninaswap/GUI/prodotti.fxml"));
 	        Parent root = loader.load();
 	        ControllerProdotti controllerProdotti = loader.getController();
 	        
@@ -62,7 +62,7 @@ public class Controller {
 	public void Acquisti(MouseEvent e) {
 		System.out.println("Hai selezionato Acquisti");
 		try {
-            Parent root = FXMLLoader.load(getClass().getResource("acquisti.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../../uninaswap/GUI/acquisti.fxml"));
             Scene scene = new Scene(root);
 	        Stage currentStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 	        currentStage.setScene(scene);
@@ -78,7 +78,7 @@ public class Controller {
 	@FXML
 	public void mostraLogin(MouseEvent e) {
 		try {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../../uninaswap/GUI/login.fxml"));
             Scene scene = new Scene(root);
 	        Stage currentStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 	        currentStage.setScene(scene);
@@ -94,7 +94,7 @@ public class Controller {
 	@FXML
     public void mostraRegistrazione(MouseEvent e) {
 		try {
-            Parent root = FXMLLoader.load(getClass().getResource("registrazione.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../../uninaswap/GUI/registrazione.fxml"));
             Scene scene = new Scene(root);
 	        Stage currentStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 	        currentStage.setScene(scene);

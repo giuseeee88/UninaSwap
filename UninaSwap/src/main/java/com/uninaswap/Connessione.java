@@ -10,7 +10,7 @@ public class Connessione {
 	public static Connection getConnection() throws SQLException {
     	if(conn == null) {
     		Properties props = new Properties();
-            try (InputStream input = Controller.class.getClassLoader().getResourceAsStream("uninaswap/resources/db.properties")) { 
+            try (InputStream input = Controller.class.getClassLoader().getResourceAsStream("uninaswap/Resources/db.properties")) { 
                 if (input == null) throw new RuntimeException("File db.properties non trovato!");
                 props.load(input);
                 String url = props.getProperty("db.url");

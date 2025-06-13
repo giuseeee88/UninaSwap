@@ -3,11 +3,7 @@ package com.uninaswap;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;

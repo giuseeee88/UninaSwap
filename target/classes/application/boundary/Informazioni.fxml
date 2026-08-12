@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="600.0" prefWidth="1100.0" stylesheets="@../resources/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.InformazioniBoundary">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1100.0">
+         <children>
+            <AnchorPane id="sidebar" prefHeight="600.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="112.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMG/immaginiProgramma/logo2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="19.0" layoutY="140.0" onMouseClicked="#SelezionaPagina" prefHeight="50.0" prefWidth="112.0" styleClass="label-sidebar" text="Prodotti" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="210.0" onMouseClicked="#SelezionaPagina" prefHeight="50.0" prefWidth="112.0" styleClass="label-sidebar" text="Crea annuncio" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="280.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="112.0" styleClass="label-sidebar" text="I tuoi annunci" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="350.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="128.0" styleClass="label-sidebar" text="Offerte" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="420.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="128.0" styleClass="label-sidebar" text="Informazioni" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="navbar" layoutX="148.0" prefHeight="102.0" prefWidth="952.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" layoutX="719.0" layoutY="20.0" prefHeight="62.0" prefWidth="220.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="immagineNav" fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label id="label-profilo" fx:id="usernameDashboard" onMouseClicked="#SelezionaPagina" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="149.0" layoutY="102.0" prefHeight="498.0" prefWidth="949.0" style="-fx-background-color: #F2EFEA;">
+               <children>
+                  <AnchorPane prefHeight="498.0" prefWidth="949.0">
+                     <children>
+                        <HBox layoutY="20.0" prefHeight="250.0" prefWidth="450.0">
+                           <children>
+                              <BarChart fx:id="chartOfferteInviate" titleSide="BOTTOM">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" tickLabelGap="10.0" fx:id="xAxisInviate">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont></CategoryAxis>
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="yAxisInviate" autoRanging="false" side="LEFT" upperBound="20.0" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="485.0" layoutY="20.0" prefHeight="250.0" prefWidth="450.0">
+                           <children>
+                              <BarChart fx:id="chartOfferteAccettate" titleSide="BOTTOM">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" tickLabelGap="10.0" fx:id="xAxisAccettate">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont></CategoryAxis>
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="yAxisAccettate" autoRanging="false" side="LEFT" upperBound="20.0" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="5.0" layoutY="300.0" prefHeight="193.0" prefWidth="300.0">
+                           <children>
+                              <BarChart fx:id="chartPrezzoMinimo" prefHeight="193.0" prefWidth="324.0" style=" -fx-bar-gap: 10; -fx-category-gap: 30; ">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" tickLabelGap="10.0">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont>
+                                    </CategoryAxis>
+                                </xAxis>
+										<yAxis>
+										   <NumberAxis fx:id="yAxisMinimo" autoRanging="false" lowerBound="0.0" minorTickVisible="false" side="LEFT" tickUnit="50.0" upperBound="500">
+										      <tickLabelFont>
+										         <Font size="10.0" />
+										      </tickLabelFont>
+										   </NumberAxis>
+										</yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="315.0" layoutY="300.0" prefHeight="193.0" prefWidth="300.0">
+                           <children>
+                              <BarChart fx:id="chartPrezzoMassimo" prefHeight="193.0" prefWidth="341.0" style=" -fx-bar-gap: 10; -fx-category-gap: 30; ">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" tickLabelGap="10.0">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont>
+                                    </CategoryAxis>
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="yAxisMinimo" autoRanging="false" lowerBound="0.0" minorTickVisible="false" side="LEFT" tickUnit="50.0" upperBound="500">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont>
+                                    </NumberAxis>
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="635.0" layoutY="300.0" prefHeight="193.0" prefWidth="300.0">
+                           <children>
+                              <BarChart fx:id="chartPrezzoMedio" prefHeight="193.0" prefWidth="341.0" style=" -fx-bar-gap: 10; -fx-category-gap: 30; ">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" tickLabelGap="10.0">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont>
+                                    </CategoryAxis>
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="yAxisMinimo" autoRanging="false" lowerBound="0.0" minorTickVisible="false" side="LEFT" tickUnit="50.0" upperBound="500">
+                                       <tickLabelFont>
+                                          <Font size="10.0" />
+                                       </tickLabelFont>
+                                    </NumberAxis>
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                        <Label fx:id="labelOfferteAccettate" layoutX="520.0" layoutY="10.0" prefHeight="20.0" prefWidth="411.0" style="-fx-alignment: center; -fx-font-weight: bold;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelOfferteInviateTotali" layoutX="38.0" layoutY="10.0" prefHeight="20.0" prefWidth="411.0" style="-fx-alignment: center; -fx-font-weight: bold;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelControffertaMinima" layoutX="46.0" layoutY="278.0" prefHeight="20.0" prefWidth="256.0" style="-fx-alignment: center; -fx-font-weight: bold;" />
+                        <Label fx:id="labelControffertaMassima" layoutX="360.0" layoutY="278.0" prefHeight="20.0" prefWidth="256.0" style="-fx-alignment: center; -fx-font-weight: bold;" />
+                        <Label fx:id="labelControffertaMedia" layoutX="675.0" layoutY="278.0" prefHeight="20.0" prefWidth="256.0" style="-fx-alignment: center; -fx-font-weight: bold;" />
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+               </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="600.0" prefWidth="1100.0" stylesheets="@../resources/application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.boundary.ProfiloBoundary">
+   <children>
+      <AnchorPane prefHeight="614.0" prefWidth="1100.0">
+         <children>
+            <AnchorPane id="sidebar" prefHeight="600.0" prefWidth="143.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="112.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image><Image url="@../IMG/immaginiProgramma/logo2.png" /></image>
+                  </ImageView>
+                  <Label layoutX="19.0" layoutY="140.0" onMouseClicked="#SelezionaPagina" prefHeight="50.0" prefWidth="112.0" styleClass="label-sidebar" text="Prodotti" textFill="WHITE">
+                     <cursor><Cursor fx:constant="HAND" /></cursor>
+                     <font><Font size="16.0" /></font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="210.0" onMouseClicked="#SelezionaPagina" prefHeight="50.0" prefWidth="112.0" styleClass="label-sidebar" text="Crea annuncio" textFill="WHITE">
+                     <cursor><Cursor fx:constant="HAND" /></cursor>
+                     <font><Font size="16.0" /></font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="280.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="112.0" styleClass="label-sidebar" text="I tuoi annunci" textFill="WHITE">
+                     <cursor><Cursor fx:constant="HAND" /></cursor>
+                     <font><Font size="16.0" /></font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="350.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="128.0" styleClass="label-sidebar" text="Offerte" textFill="WHITE">
+                     <cursor><Cursor fx:constant="HAND" /></cursor>
+                     <font><Font size="16.0" /></font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="420.0" onMouseClicked="#SelezionaPagina" prefHeight="54.0" prefWidth="128.0" styleClass="label-sidebar" text="Informazioni" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="navbar" layoutX="148.0" prefHeight="102.0" prefWidth="952.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" layoutX="719.0" layoutY="20.0" prefHeight="62.0" prefWidth="220.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="immagineNav" fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ImageView>
+                        <Label id="label-profilo" fx:id="usernameDashboard" textFill="WHITE">
+                           <font><Font size="16.0" /></font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="149.0" layoutY="102.0" prefHeight="498.0" prefWidth="949.0" style="-fx-background-color: #F2EFEA;">
+               <children>
+                  <AnchorPane prefHeight="498.0" prefWidth="949.0">
+                     <children>
+                        <Pane layoutX="26.0" layoutY="14.0" prefHeight="150.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-background-radius: 100; -fx-border-color: black; -fx-border-width: 4;">
+                           <children>
+                              <ImageView fx:id="immagineProfilo" fitHeight="140.0" fitWidth="140.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+						<Pane layoutX="139.0" layoutY="119.0" onMouseClicked="#cambiaFoto" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 14; -fx-background-radius: 14;">
+						   <children>
+						      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+						         <image>
+						            <Image url="@../IMG/immaginiProgramma/edit2.png" />
+						         </image>
+						      </ImageView>
+						   </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+						</Pane>
+                        <Label fx:id="usernameProfilo" layoutX="200.0" layoutY="89.0" prefHeight="17.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font></Label>
+                        <Pane layoutX="23.0" layoutY="180.0" prefHeight="62.0" prefWidth="440.0" styleClass="ProfileBord">
+                           <HBox layoutX="14.0" layoutY="16.0" spacing="5.0">
+                           <children>
+                           	  <Label layoutX="15.0" layoutY="23.0" text="Nome e cognome:">
+                                    <font>
+                                       <Font size="20.0" />
+                                    </font></Label>
+                              <Label fx:id="nomeProfilo" layoutX="53.0" layoutY="23.0" prefHeight="33.0">
+                                    <font>
+                                       <Font size="16.0" />
+                                    </font></Label>
+                              <Label fx:id="cognomeProfilo" layoutX="70.0" layoutY="23.0" prefHeight="33.0">
+                                    <font>
+                                       <Font size="16.0" />
+                                    </font></Label>
+                           </children>
+                           </HBox>
+                        </Pane>
+                        <Pane layoutX="23.0" layoutY="250.0" prefHeight="62.0" prefWidth="440.0" styleClass="ProfileBord">
+                           <children>
+                              <Label layoutX="14.0" layoutY="16.0" text="Matricola:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label fx:id="matricolaProfilo" layoutX="105.0" layoutY="20.0" prefHeight="17.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="23.0" layoutY="320.0" prefHeight="62.0" prefWidth="440.0" styleClass="ProfileBord">
+                           <children>
+                              <Label layoutX="14.0" layoutY="16.0" text="Email:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label fx:id="emailProfilo" layoutX="70.0" layoutY="19.0" prefHeight="27.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </Pane>
+                        <Pane id="logout" layoutX="23.0" layoutY="400.0" onMouseClicked="#logout" prefHeight="79.0" prefWidth="288.0" styleClass="ProfileBord">
+                           <children>
+                              <Label layoutX="79.0" layoutY="27.0" style="-fx-font-weight: bold;" text="Esci dal tuo profilo utente" textFill="RED">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <ImageView fitHeight="79.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IMG/immaginiProgramma/logout.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
